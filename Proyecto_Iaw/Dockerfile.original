@@ -1,0 +1,7 @@
+FROM httpd:latest
+RUN  apt update && apt install tzdata -y
+ENV  TZ=Europe/Madrid
+RUN  apt -y update && apt -y install php
+COPY default /etc/apache2/sites-available/default
+COPY iaw_proyecto/. /usr/local/apache2/htdocs/
+EXPOSE 80

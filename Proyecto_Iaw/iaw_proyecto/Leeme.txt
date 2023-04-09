@@ -1,0 +1,11 @@
+#conexion a base de datos mediante conector:
+$conector = mysqli_conector("localhost","root","")
+
+#para crear la base de datos para el login inicial ejecutar el script login.php
+#para borrar la base de datos para el login inicial ejecutar el script drop_db_login.php
+#credenciales de login:
+username:admin
+password:admin
+
+#conexión a la base de datos empresa una vez creada:
+$conector = mysqli_conector("localhost","root","","empresa")
